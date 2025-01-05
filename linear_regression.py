@@ -2,13 +2,10 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error, root_mean_squared_error, r2_score
 
 
 df = pd.read_csv("breast_cancer_upd.csv", usecols=["Class", "Clump Thickness", "Uniformity of Cell Size", "Uniformity of Cell Shape", "Marginal Adhesion", "Single Epithelial Cell Size", "Bare Nuclei", "Bland Chromatin", "Normal Nucleoli", "Mitoses"])
-
-# Display the first few rows of the dataframe
-# print(df.head())
 
 # "Class" is the name of the column we want to predict
 X = df.drop("Class", axis=1)
@@ -24,10 +21,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 print(X.shape, y.shape)
 print(X_train.shape, y_train.shape)
 print(X_test.shape, y_test.shape)
-
-# Display the first five values of X and y
-# print(X.values[:5])
-# print(y[:5])
 
 # Create and train the linear regression model
 model = LinearRegression()
@@ -45,6 +38,8 @@ r2 = r2_score(y_train, y_train_pred)
 print("R-squared:", r2)
 mse = mean_squared_error(y_train, y_train_pred)
 print("Mean Squared Error:", mse)
+rmse = root_mean_squared_error(y_train, y_train_pred)
+print("Root Mean Squared Error:", rmse)
 
 # Make predictions on the test set
 y_test_pred = model.predict(X_test)
@@ -54,9 +49,12 @@ r2_test = r2_score(y_test, y_test_pred)
 print("R-squared (test set):", r2_test)
 mse_test = mean_squared_error(y_test, y_test_pred)
 print("Mean Squared Error (test set):", mse_test)
+rmse_test = root_mean_squared_error(y_test, y_test_pred)
+print("Root Mean Squared Error:", rmse_test)
+
 
 # Create prediction data with the same feature names
-predict_data = pd.DataFrame([[5, 2, 2, 2, 10, 10, 3, 2, 2]], columns=X.columns)
+predict_data = pd.DataFrame([[1, 1, 1, 1, 5, 3, 3, 3, 2]], columns=X.columns)
 print("Predict data:", predict_data)
 
 # Make a prediction

@@ -50,7 +50,7 @@ mse_test = mean_squared_error(y_test, y_test_pred)
 print("Mean Squared Error (test set):", mse_test)
 
 # Create prediction data with polynomial features
-predict_data = pd.DataFrame([[3, 2, 2, 2, 4, 4, 4, 1, 1]], columns=X.columns)
+predict_data = pd.DataFrame([[3, 4, 3, 2, 4, 3, 5, 1, 1]], columns=X.columns)
 predict_data_poly = poly.transform(predict_data)
 print("Predict data (polynomial):", predict_data_poly)
 

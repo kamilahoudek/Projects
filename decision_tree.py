@@ -46,8 +46,8 @@ print("R-squared (test set):", r2_test)
 print("Mean Squared Error (test set):", mse_test)
 
 # Create prediction data with the same feature names
-predict_data = pd.DataFrame([[3, 2, 2, 2, 3, 3, 3, 6, 2]], columns=X.columns)
-print("Predict data:", predict_data)
+predict_data = pd.DataFrame([[3, 1, 2, 2, 3, 4, 4, 3, 2]], columns=X.columns)
+# print("Predict data:", predict_data)
 
 # Make a prediction
 prediction = model.predict(predict_data)
