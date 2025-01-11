@@ -1,5 +1,7 @@
-Regression project
-BREAST CANCER DATASET
+PROJECTS
 
-Banas Roman
-Parik Richard
+Regression - Wine Quality dataset
+Classification - Breast Cancer dataset
+
+
+Parik Richard, Banas Roman
