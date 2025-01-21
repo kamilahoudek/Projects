@@ -1,7 +1,9 @@
 PROJECTS
 
 Regression - Wine Quality dataset
-Classification - Breast Cancer dataset
+Banas Roman, Parik Richard
 
 
-Parik Richard, Banas Roman
+
+Classification - Hotel Reservations dataset
+Banas Roman, Houdek Kamila, Parik Richard
