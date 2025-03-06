@@ -12,4 +12,4 @@ Unsupervised Learning - World Bank dataset - Banas Roman, Houdek Kamila, Parik R
 
 
 
-Final project - Banas Roman, Houdek Kamila, Parik Richard
+FINAL project - Brain Tumor dataset - Banas Roman, Houdek Kamila, Parik Richard
